@@ -8,13 +8,38 @@ a{
     text-decoration: none;
 }
 
-body.dark{
-    background-image:url(./DeepSpace.jpg);
+/* Padrão: Sem class*/
+html{ 
+    --bg-color: url(./Lawrencium.jpg);
+    --text-color: rgb(0, 0, 0);
+    --primary-color: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
+    --hover-color: linear-gradient(90deg, #00c8ff90 0%, #92fe9d87 100%);
+    --border-color: solid rgb(255, 255, 255);
+}
+
+/* Com class: dark-green */
+body.dark-green{
+    --bg-color: url(./DeepSpace.jpg);
+    --text-color: rgb(0, 0, 0);
+    --border-color: white;
+    --primary-color: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
+    --hover-color: linear-gradient(90deg, #00c8ff90 0%, #92fe9d87 100%);
+    --border-color: solid white;
+}
+
+/* Header e Footer color */
+.dark{
+    color: white;
+}
+
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
     font-family: 'Roboto Mono', monospace;
 }
 
 .container{
-    border: 1.5px solid rgb(255, 255, 255);
+    border: 1.5px var(--border-color);
     border-radius: 8px;
     padding: 10px;
     text-align: center;
@@ -22,17 +47,17 @@ body.dark{
     margin: 70px auto 70px;
 }
 
-img{
-    width: 75%;
-    border-radius: 200px;
-}
-
 img.avatar{
     border-radius: 50%;
     width: 200px;
     height: 200px;
-    padding: 2px;
-    border: solid rgb(255, 255, 255) 2px;
+    padding: 2.5px;
+    border: 2px var(--border-color);
+}
+
+img{
+    width: 75%;
+    border-radius: 200px;
 }
 
 ul{
@@ -41,34 +66,45 @@ ul{
 }
 
 h1{
-    color: white;
     margin-top: 10px;
     display: block;
     font-weight: 700;
 }
 
 svg{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     width: 25px;
     height: 25px;
 }
 
-ul a{
+#img-github{
+    position: relative;
+    right: 9px;
+}
+
+#img-twitter{
+    position: relative;
+    right: 5px;
+}
+
+#img-gm{
+    position: relative;
+    right: 10px;
+}
+
+ul li a{
     height: 53px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
-    color: rgb(0, 0, 0);
+    background: var(--primary-color);
+    color: var(--text-color);
     text-transform: capitalize;
     font-size: 17px;
     font-weight: 600;
     margin-bottom: 16px;
     border-radius: 8px;
 
-    transition: background 400ms;
+    transition: background 500ms;
 }
 
 ul img{
@@ -78,13 +114,12 @@ ul img{
 }
 
 ul li a:hover{
-    background: linear-gradient(90deg, #00c8ff90 0%, #92fe9d87 100%);
+    background: var(--hover-color);
 }
 
 footer{
     font-weight: 500;
     font-size: 14px;
-    color:azure;
     opacity: 0.6;
     transition: opacity 300ms;
 }
@@ -92,43 +127,3 @@ footer{
 footer:hover{
     opacity: 1;
 }
-
-
-/* .button1{
-    background-color: antiquewhite;
-    border-radius: 8px;
-    border: 1px solid black;
-    width: 200px;
-    height: 50px;
-    margin-bottom: 15px;
-}
-
-.button2{
-    background-color: antiquewhite;
-    border-radius: 8px;
-    border: 1px solid black;
-    width: 200px;
-    height: 50px;
-    margin-bottom: 15px;
-}
-
-.button3{
-    background-color: antiquewhite;
-    border-radius: 8px;
-    border: 1px solid black;
-    width: 200px;
-    height: 50px;
-    margin-bottom: 15px;
-}
-
-.button4{
-    background-color: antiquewhite;
-    border-radius: 8px;
-    border: 1px solid black;
-    width: 200px;
-    height: 50px;
-    margin-bottom: 15px;
-} */
-
-
-
