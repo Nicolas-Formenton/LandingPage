@@ -13,9 +13,20 @@
     <link href="./favicon.png" rel="icon" type="image/x-icon"/>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">    
 
-    <!-- Change theme: class="dark-green" -->
-    <body class="">
-
+    <body>
+        <p id="theme">Switch Background Theme</p>
+        <div id="toggle">
+        <i class="indicator"></i>
+        </div>
+        <!-- JS Switch Themes-->
+        <script>
+            const body = document.querySelector('body');
+            const toggle = document.getElementById('toggle');
+            toggle.onclick = function(){
+                toggle.classList.toggle('active');
+                body.classList.toggle('active')
+            }       
+        </script>
         <div class="container">    
         <img class="avatar" src="./3976.png" alt="BestBud 3976">
            
